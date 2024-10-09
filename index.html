@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Message for Sultan!</title>
+    <style>
+        body {
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Heart container */
+        .heart-container {
+            display: flex;
+            justify-content: space-around;
+            width: 350px;
+        }
+
+        /* Heart styles */
+        .heart {
+            width: 120px;
+            height: 120px;
+            position: relative;
+            transform: rotate(-45deg);
+            animation: heartbeat 1s infinite;
+        }
+        .heart::before,
+        .heart::after {
+            content: "";
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            position: absolute;
+        }
+        .heart::before {
+            top: -60px;
+            left: 0;
+        }
+        .heart::after {
+            left: 60px;
+            top: 0;
+        }
+
+        /* Yellow heart */
+        .yellow-heart {
+            background-color: yellow;
+        }
+        .yellow-heart::before,
+        .yellow-heart::after {
+            background-color: yellow;
+        }
+
+        /* Blue heart */
+        .blue-heart {
+            background-color: blue;
+        }
+        .blue-heart::before,
+        .blue-heart::after {
+            background-color: blue;
+        }
+
+        /* Heartbeat animation */
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1) rotate(-45deg);
+            }
+            50% {
+                transform: scale(1.1) rotate(-45deg);
+            }
+        }
+
+        /* Text animation */
+        h1 {
+            margin-top: 20px;
+            color: #333;
+            font-size: 24px;
+            animation: fadeIn 2s ease-in-out forwards;
+            opacity: 0;
+        }
+
+        /* Fade-in animation for text */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="heart-container">
+        <div class="heart yellow-heart"></div>
+        <div class="heart blue-heart"></div>
+    </div>
+    <h1>You are the best brother in this world Sultan</h1>
+</body>
+</html>
